@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+        <meta charset='UTF-8'>
+        
+        <title>휴먼 점심 메뉴 추천 서비스 (LongPark)</title>
+        
+        <style>
+            main {position: relative; top: -20px;}
+            main h1 {color: green; text-align: center;}
+            main h2 {color: green; text-align: center;}            
+            section h3 {color: blue;}
+            section { margin-top: 50px;}
+            main section h1 {color: red;}
+            #seven {float: right; margin-right: 200px; margin-top: -50px; display: inline-block;}            
+        </style>
+        
+
+        <script>
+          window.onload = function() {
+            var menu1 = document.querySelector("#menu1");
+            var menu2 = document.querySelector("#menu2");
+            var menu3 = document.querySelector("#menu3");
+
+            menu1.addEventListener("click", function() {
+              var content = document.querySelector("#content1");
+              content.style.display = "block";
+            });
+
+            menu2.addEventListener("click", function() {
+              var content = document.querySelector("#content2");
+              content.style.display = "block";
+            });
+
+            menu3.addEventListener("click", function() {
+              var content = document.querySelector("#content3");
+              content.style.display = "block";
+            });
+
+            var addButton = document.querySelector("#addButton");
+            addButton.addEventListener("click", function() {
+              var name = document.querySelector("#name").value;
+              var food = document.querySelector("#food").value;
+
+              var table = document.querySelector("table tbody");
+              var newRow = table.insertRow();
+
+              var nameCell = newRow.insertCell(0);
+              var foodCell = newRow.insertCell(1);
+
+              nameCell.innerHTML = name;
+              foodCell.innerHTML = food;
+            });
+          };
+        </script>
+
+
+
+        <script>
+        function addReview() {
+          var table = document.getElementById("reviewTable").getElementsByTagName('tbody')[0];
+          var restaurantName = document.getElementsByName("restaurantName")[0].value;
+          var review = document.getElementsByName("review")[0].value;
+
+          var row = table.insertRow(-1);
+          var cell1 = row.insertCell(0);
+          var cell2 = row.insertCell(1);
+
+          cell1.innerHTML = restaurantName;
+          cell2.innerHTML = review;
+
+          document.getElementsByName("restaurantName")[0].value = "";
+          document.getElementsByName("review")[0].value = "";
+        }
+        </script>
+
+
+    
+    </head>
+    
+    
+    
+    <body>
+    
+        <header>
+            <img src="logo.png" alt="logo.png">                                             
+        </header>
+        
+        <main>
+            <h1> 맛있는거 먹자!! (at 영등포)</h1>
+            <h2> 🥘🍜수강생을 응원하기 위한 점심 메뉴 추천 서비스🍣🍖</h2>
+            <section style="margin-bottom: 50px;">
+                <h3>같이 먹으러 가요!(실시간)</h3>
+                
+                <img src="7.png" alt="7.png" id='seven' width='480' height='832'>             
+                
+                <input type="text" id="name" placeholder="너 누구야!">
+                <input type="text" id="food" placeholder="뭐 먹고 싶니?">
+                <button id="addButton">추가</button>                
+                
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>이  름</th>
+                            <th>공  지</th>
+
+                        </tr>
+                        <tr>
+                            <td>손&nbsp;&nbsp;&nbsp;아&nbsp;&nbsp;&nbsp;</td>
+                            <td>반장은 꼭 적어!</td>
+                        </tr>
+                        <tr>
+                            <td>장인혁&nbsp;</td>
+                            <td>양꼬치 먹고픔</td>
+                        </tr>
+                        <tr>
+                            <td>장인혁&nbsp;</td>
+                            <td>양꼬치 먹고픔</td>
+                        </tr>  
+                        <tr>
+                            <td>미녀 삼총사&nbsp;</td>
+                            <td>술</td>
+                        </tr>                          
+                    </tbody>
+                </table>                
+
+            </section>
+            
+            
+            <section style="margin-bottom: 50px;">
+            
+                <h3>학원 근처 맛집 추천</h3>
+                
+                <p>👉먹고 싶은 음식 스타일을 클릭하세요.</p>                
+                
+                <nav>
+                    <ol>
+                        <li><a href="#" id="menu1">한식</a></li>
+                        <section id="content1" style="display:none;">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>식당명</th>
+                                        <th>추천 메뉴</th>
+
+                                    </tr>
+                                    <tr>
+                                        <td>박씨물고온제비</td>
+                                        <td>&nbsp;&nbsp;&nbsp;괜찮지만, 김치볶음밥, 김치찌개는 맵질이 주의!</td>
+                                    </tr>
+                                    <tr>
+                                        <td>곤지암소머리국밥</td>
+                                        <td>&nbsp;&nbsp;&nbsp;먹을만함</td>
+                                    </tr>
+                                    <tr>
+                                        <td>라밥</td>
+                                        <td>&nbsp;&nbsp;&nbsp;가성비! 김밥천국의 업그레이드판</td>
+                                    </tr>                                
+                                </tbody>
+                            </table>       
+                        </section>                        
+
+                        <li><a href="#" id="menu2">양식</a></li>
+                        <section id="content2" style="display:none;">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>식당명</th>
+                                        <th>추천 메뉴</th>
+
+                                    </tr>
+                                    <tr>
+                                        <td>더플레이스</td>
+                                        <td>&nbsp;&nbsp;&nbsp;안가봤음</td>
+                                    </tr>
+                                    <tr>
+                                        <td>닥터로빈</td>
+                                        <td>&nbsp;&nbsp;&nbsp;안가봤음</td>
+                                    </tr>
+                                    <tr>
+                                        <td>영등포돈까스</td>
+                                        <td>&nbsp;&nbsp;&nbsp;안가봤음</td>
+                                    </tr>                                
+                                </tbody>
+                            </table>       
+                        </section>           
+
+                        <li><a href="#" id="menu3">일식</a></li>
+                        <section id="content3" style="display:none;">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>식당명</th>
+                                        <th>추천 메뉴</th>
+
+                                    </tr>
+                                    <tr>
+                                        <td>스시나베</td>
+                                        <td>&nbsp;&nbsp;&nbsp;안가봤음</td>
+                                    </tr>
+                                    <tr>
+                                        <td>지로우</td>
+                                        <td>&nbsp;&nbsp;&nbsp;라멘보다 차슈덮밥이 더 괜찮고 가성비 좋음</td>
+                                    </tr>
+                                    <tr>
+                                        <td>코코로벤또</td>
+                                        <td>&nbsp;&nbsp;&nbsp;안가봤음</td>
+                                    </tr>                                
+                                </tbody>
+                            </table>       
+                        </section>           
+                        
+                        <li><a href="#" id="menu3">중식 (서비스 예정)</a></li>
+                        
+                        <li><a href="#" id="menu3">분식 (서비스 예정)</a></li>
+                        
+                    <ol>
+                </nav>
+                
+            </section>
+            
+            
+            <section style="margin-bottom: 60px;">
+                <h3>한줄평!</h3>
+                <h4>익명 보장!!! (날먹하지 말고 꼭 평가할 것!)</h1>
+                <input type="text" name="restaurantName" placeholder="식당명">
+                <input type="text" name="review" placeholder="한줄 평가!">
+                <button onclick="addReview()">추가</button>
+                
+                <table id="reviewTable">
+                    <tbody>
+                        <tr>
+                            <th>식당명</th>
+                            <th>한줄평</th>
+
+                        </tr>
+                        <tr>
+                            <td>박씨물고온제비</td>
+                            <td>&nbsp;&nbsp;&nbsp;괜찮지만, 맵찔이는 김치볶음밥, 김치찌개 주의!</td>
+                        </tr>
+                        <tr>
+                            <td>지로우&nbsp;</td>
+                            <td>&nbsp;&nbsp;&nbsp;라멘보다 차슈덮밥이 더 괜찮고 가성비 좋음</td>
+                        </tr>
+                        <tr>
+                            <td>라밥</td>
+                            <td>&nbsp;&nbsp;&nbsp;가성비! 니가 생각이라는게 없는 놈이면 그냥 여기 가!</td>
+                        </tr>                                
+                    </tbody>
+                </table>                    
+                
+                
+                <p style="margin-top: 60px;">여기는 Ubuntu의 정신으로 함께 만들어가는 공간입니다.</p>
+                
+            </section>
+            
+      
+        </main>
+        
+        <footer style="margin-top: -50px;">
+            <p>Copyright ©️ 2023 LongPark Company. All rights reversed. hosting by hmkd24 </p>
+        </footer>
+        
+    </body>
+
+
+</html>
