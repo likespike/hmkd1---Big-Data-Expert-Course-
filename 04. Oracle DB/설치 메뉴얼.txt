@@ -1,0 +1,65 @@
+<맥 설치>
+https://proni.tistory.com/entry/Oracle-XE%EB%B2%84%EC%A0%84-%EC%84%A4%EC%B9%98-at-Mac
+
+oraclexe - 윈도우에서는 비번 oracle로 했음
+
+
+cmd
+sqlplus system/oracle
+exit
+------------------
+<developer>
++
+sys (super 사용자 계정)
+비밀번호
+(SYSDBA)
+
+테스트로 상태 성공 확인
+
+c##hr
+
+------------------------------
+sql plus 로그인 실패 해결 방법
+https://wikidocs.net/3907
+
+
+시스템 환경 변수 편집
+환경 변수
+
+시스템 변수쪽 -> 새로 만들기
+JAVA_HOME
+jdk1.8.0_261파일 경로 복사 -> 변수 값에 입력
+Path에 들어가서 -> %JAVA_HOME%\bin
+
+cmd에서 java -version 확인
+
+------------------------------------------------------------
+
+OracleXE - setup - oracle(비번임)
+
+CDB만 설치
+
+C:\app\user\product\18.0.0\oradata\XE\system01.dbf 확인
+
+cmd
+sqlplus system/oracle
+exit() ;
+
+--------------------------------------------
+SQL Developer 설치
+
+Windows\System32의 msvcr100.dll 카피 -> C:\ProgramFiles\Java\jdk1.8.0.bin 안에 복사
+
+고해상도 모니터
+
+
++
+sys
+비밀번호
+(SYSDBA)
+
+테스트로 상태 성공 확인
+
+c##hr
+
+
