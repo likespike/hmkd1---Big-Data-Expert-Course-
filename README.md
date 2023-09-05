@@ -40,3 +40,16 @@
 - pip3 install jupyter
 - jupyter notebook
 
+# 가상환경에서 jupyter notebook 실행할 경우
+- jupyter notebook에 가상환경 연결해야 함
+- python -m ipykernel install --user --name {가상환경 이름} --display-name "{디스플레이 이름}"
+  - ex> python3 -m ipykernel install --user --name test --display-name test
+  
+# conda 가상환경에 pytorch 설치
+- 가상환경 생성
+- https://pytorch.org/get-started/locally/ 에서 설정 후, Run this Command를 복사해서 실행
+  - ex> conda install pytorch::pytorch torchvision torchaudio -c pytorch
+
+
+
+
