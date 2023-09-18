@@ -22,7 +22,7 @@
   - vscode에서 Jupyter 플러그인 설치 (Extension Pack임, 4개)
   - vscode에서 Python 플러그인 설치 (Pylance 함께 설치됨)
 - 새파일 만들기
-  - Shift + Command + P (사용하 수 있는 모든 commands 보여줌)
+  - Shift + Command + P (사용할 수 있는 모든 commands 보여줌)
   - Create: New Jupyter Notebook 선택
   - Command + S (저장)
 - 파이썬 인터프리터 선택하기
